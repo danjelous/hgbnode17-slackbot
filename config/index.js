@@ -28,7 +28,7 @@ module.exports = {
     slackToken: process.env.SLACK_TOKEN,
     witToken: process.env.WIT_TOKEN,
     serviceTimeout: 30,
-    botName: 'khan-bot',
+    botName: 'bot-danjelous',
     log: (env) => {
         if(env) return log[env]();
         return log[process.env.NODE_ENV || 'development']()

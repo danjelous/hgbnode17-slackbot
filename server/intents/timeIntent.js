@@ -7,9 +7,7 @@ module.exports.process = function process(intentData, registry, log, cb) {
     if(intentData.intent[0].value !== 'time') 
         return cb(new Error('Expected time intent but got ' + intentData.intent[0].value));
 
-    const location = intentData.location[0].value.replace(/,.?khan\-bot/i, '');
-
-
+    const location = intentData.location[0].value.replace(/,.?bot\-danjelous/i, '');
 
     const service = registry.get('time');
     if(!service) return cb(false, 'No service available');
